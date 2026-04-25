@@ -13,9 +13,26 @@ async function main() {
     console.log("+===================================+");
 
     console.log(`| 📦 Version: ${result.formattedVersion}`);
-    console.log(
-      `|   (v${result.version.x}.${result.version.y}.${result.version.z})`,
-    );
+
+    let totalX: string = result.version.x.toString();
+    let totalY: string = result.version.y.toString();
+    let totalZ: string = result.version.z.toString();
+
+    if (result.manifoldPosition.x > 0) {
+      totalX += "+";
+    }
+    if (result.manifoldPosition.y > 0) {
+      totalY += "+";
+    }
+    if (result.manifoldPosition.z > 0) {
+      totalZ += "+";
+    }
+
+    totalX += result.manifoldPosition.x.toFixed(3) + "i";
+    totalY += result.manifoldPosition.y.toFixed(3) + "i";
+    totalZ += result.manifoldPosition.z.toFixed(3) + "i";
+
+    console.log(`|   v(${totalX}).(${totalY}).(${totalZ})`);
 
     console.log(
       `| 🎯 State Confidence: ${(result.confidence * 100).toFixed(1)}%`,
