@@ -1,0 +1,61 @@
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --text-secondary: #666666;
+  --border: #cccccc;
+  --section-bg: #ffffff;
+  --pre-bg: #f8f8f8;
+  --button-bg: #222222;
+  --button-text: #ffffff;
+  --button-hover: #444444;
+  --input-bg: #ffffff;
+  --input-text: #222222;
+  --input-border: #cccccc;
+  --branch-item-bg: #eeeeee;
+  --accent: #0000ff;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #e0e0e0;
+    --text-secondary: #aaaaaa;
+    --border: #444444;
+    --section-bg: #121212;
+    --pre-bg: #1e1e1e;
+    --button-bg: #ffffff;
+    --button-text: #121212;
+    --button-hover: #cccccc;
+    --input-bg: #222222;
+    --input-text: #e0e0e0;
+    --input-border: #444444;
+    --branch-item-bg: #2c2c2c;
+    --accent: #4d4dff;
+  }
+}
+
+@font-face {
+  font-family: "PulpScience";
+  src: url("./assets/fonts/3604-pulp-science-web.woff") format("truetype");
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+h1,
+h2 {
+  font-family: "PulpScience";
+}
+
+#root {
+  width: 100%;
+}

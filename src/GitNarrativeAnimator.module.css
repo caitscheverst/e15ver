@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  background: var(--pre-bg);
+}
+
+.narrative {
+  flex: 1;
+  font-family: monospace;
+  font-size: 0.85em;
+  min-height: 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.logLine {
+  margin-bottom: 6px;
+  transition: opacity 0.5s;
+  color: var(--text-secondary);
+}
+
+.prompt {
+  color: var(--border);
+  margin-right: 8px;
+}
+
+.verDisplay {
+  min-width: 220px;
+  text-align: center;
+}
+
+.verLabel {
+  font-size: 0.65em;
+  margin-bottom: 10px;
+  color: var(--border);
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.verReal {
+  font-family: monospace;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.verComplex {
+  font-family: monospace;
+  font-size: 1.1em;
+  line-height: 2;
+  white-space: nowrap;
+}

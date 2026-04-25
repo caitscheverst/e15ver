@@ -1,0 +1,14 @@
+.svg {
+  overflow: visible;
+}
+
+.coordText {
+  font-size: 9px;
+  font-family: monospace;
+}
+
+.tagText {
+  font-size: 12px;
+  font-family: monospace;
+  font-weight: bold;
+}
