@@ -102,6 +102,82 @@ section {
   /* Prevent flex children from overflowing */
 }
 
+@media (max-width: 1024px) {
+  #vis-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #sidebar {
+    flex: 1;
+    position: static;
+    width: 100%;
+  }
+
+  #vizContainer {
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  #vis-layout {
+    gap: 15px;
+  }
+
+  /* Use display: contents to lift sidebar children to flex container level */
+  #sidebar {
+    display: contents;
+  }
+
+  .section-header {
+    order: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .section-header h3 {
+    width: 100%;
+  }
+
+  #viz-main {
+    order: 2;
+  }
+
+  #gitgraph-container {
+    order: 3;
+    min-height: 200px;
+    background-color: var(--section-bg);
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-bottom: 0;
+    border-radius: 4px;
+  }
+
+  .metadata {
+    order: 4;
+    background-color: var(--section-bg);
+    border: 1px solid var(--border);
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  #vizContainer {
+    height: 500px;
+  }
+
+  .random-btn {
+    width: 100%;
+  }
+
+  section {
+    max-width: 95vw;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 .section-header {
   display: flex;
   justify-content: space-between;
