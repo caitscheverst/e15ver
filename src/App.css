@@ -49,6 +49,7 @@ section {
 
   .subSection {
     padding-bottom: 1rem;
+    max-width: 80vw;
   }
 }
 

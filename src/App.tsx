@@ -722,7 +722,7 @@ function App() {
 
       <section id="interactive">
         <h2>Interactive e15ver Visualisation</h2>
-        <div>
+        <div className="subSection">
           The diagram below maps a randomised trivial git history onto the
           e15ver version manifold. Branches sprout and merge across the
           triple-complex state space.
