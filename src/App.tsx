@@ -5,6 +5,7 @@ import { GitNarrativeAnimator } from "./GitNarrativeAnimator";
 import { MathComponent } from "./MathComponent";
 import { GitLogVisualizer } from "./GitLogVisualizer";
 import type { GitBranch, GitEvent } from "./types";
+import casinoIcon from "./assets/icons/casino.png";
 
 function App() {
   const [isDark, setIsDark] = useState(
@@ -632,7 +633,7 @@ function App() {
               setRandSub(Math.floor(Math.random() * randomSubtitles.length));
             }}
           >
-            <img src="src/assets/icons/casino.png"></img>
+            <img src={casinoIcon}></img>
           </button>
         </p>
         <section id="demo">
