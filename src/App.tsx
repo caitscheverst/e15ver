@@ -799,6 +799,11 @@ function App() {
 
       <footer>
         <p>© 2026 "e15ver" (Expectation Value) Versioning Research Group</p>
+        <p>
+          <a href="https://www.npmjs.com/package/e15ver-calc">
+            📦 Reference Implementation (npm)
+          </a>
+        </p>
         <p>Logo attributions with thanks:</p>
         <p>
           <a href="https://www.flaticon.com/free-icons/psi" title="psi icons">
