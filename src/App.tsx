@@ -625,7 +625,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>e15ver: Expectation-Value Versioning</h1>
+        <h1>e15ver: Expectation Value Versioning</h1>
         <p className="subtitle">
           {randomSubtitles[randSub]}
           <button

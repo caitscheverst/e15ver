@@ -37,11 +37,10 @@
 }
 
 .verLabel {
-  font-size: 0.65em;
-  margin-bottom: 10px;
-  color: var(--border);
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
   font-family: monospace;
-  text-transform: uppercase;
   letter-spacing: 0.12em;
 }
 
