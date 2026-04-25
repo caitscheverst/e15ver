@@ -4,6 +4,7 @@ import "./App.css";
 import { GitNarrativeAnimator } from "./GitNarrativeAnimator";
 import { MathComponent } from "./MathComponent";
 import { GitLogVisualizer } from "./GitLogVisualizer";
+import { GiscusComments } from "./GiscusComments";
 import type { GitBranch, GitEvent } from "./types";
 import casinoIcon from "./assets/icons/casino.png";
 
@@ -789,6 +790,11 @@ function App() {
             </div>
           </main>
         </div>
+      </section>
+
+      <section id="comments">
+        <h2>Comments</h2>
+        <GiscusComments />
       </section>
 
       <footer>
