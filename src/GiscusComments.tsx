@@ -14,8 +14,8 @@ export function GiscusComments() {
     script.setAttribute("data-repo-id", "R_kgDOLfKYkQ");
     script.setAttribute("data-category", "General");
     script.setAttribute("data-category-id", "DIC_kwDOLfKYkc4Cc7bM");
-    script.setAttribute("data-mapping", "pathname");
-    script.setAttribute("data-strict", "0");
+    script.setAttribute("data-mapping", "number");
+    script.setAttribute("data-term", "1");
     script.setAttribute("data-reactions-enabled", "1");
     script.setAttribute("data-emit-metadata", "1");
     script.setAttribute("data-input-position", "top");
