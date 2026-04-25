@@ -62,7 +62,7 @@ export function calculateE15ver(
   const totalCommits = repoState.totalCommits;
 
   // If there are tags, use the most recent one as a seed
-  // Otherwise, derive the version purely from commit structure
+  // Otherwise, start from v0.0.0
   const tags = Array.from(repoState.tags.keys());
   let baseVersion: Version;
 
@@ -70,14 +70,8 @@ export function calculateE15ver(
     // Use most recent tag as reference
     baseVersion = parseVersion(tags[tags.length - 1]);
   } else {
-    // No tags: derive base version from commit/branch structure
-    // This makes untagged repos still produce meaningful versions
-    const vx = Math.floor(totalCommits / 20); // Major bump every ~20 commits
-    const vy = Math.floor((totalCommits % 20) / 5); // Minor bump every ~5 commits
-    const vz = totalCommits % 5; // Patch increments with each commit batch
-    baseVersion = { x: Math.max(vx, 1), y: vy, z: vz, scalar: 0 };
-    baseVersion.scalar =
-      baseVersion.x * 10000 + baseVersion.y * 100 + baseVersion.z;
+    // No tags: start from v0.0.0
+    baseVersion = parseVersion('0.0.0');
   }
 
   // Calculate frequency components from version

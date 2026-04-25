@@ -1,14 +1,40 @@
 {
   "name": "e15ver-calc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reference implementation: calculate e15ver (Expectation Value Versioning) from git repository state",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "e15ver": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "versioning",
+    "git",
+    "semver",
+    "quantum",
+    "expectation-value",
+    "e15ver"
+  ],
+  "author": "Jason Caits-Cheverst <caitscheverst@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caitscheverst/e15ver.git"
+  },
+  "homepage": "https://caitscheverst.github.io/e15ver/",
+  "bugs": {
+    "url": "https://github.com/caitscheverst/e15ver/issues"
+  },
   "scripts": {
     "build": "tsc",
     "test": "node --test dist/test.js",
-    "cli": "node dist/cli.js"
+    "cli": "node dist/cli.js",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "simple-git": "^3.21.0"
