@@ -1,6 +1,7 @@
 export * from './types.js';
 export * from './math.js';
 export { GitRepository, getRepositoryState } from './git.js';
+export { formatComplexVersion } from './math.js';
 
 import { calculateE15ver } from './math.js';
 import { getRepositoryState } from './git.js';

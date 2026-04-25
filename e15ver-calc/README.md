@@ -41,12 +41,13 @@ Output:
 ### As a Library
 
 ```typescript
-import { calculateE15verForRepo } from "e15ver-calc";
+import { calculateE15verForRepo, formatComplexVersion } from "e15ver-calc";
 
 const result = await calculateE15verForRepo(".");
-console.log(result.formattedVersion); // "1.2.1"
-console.log(result.confidence); // 0.425
-console.log(result.manifoldPosition); // { x, y, z }
+console.log(result.formattedVersion);     // "1.2.1"
+console.log(formatComplexVersion(result)); // "v(1+0.44i).(2-1.23i).(3+0.89i)"
+console.log(result.confidence);            // 0.425
+console.log(result.manifoldPosition);      // { x: 0.44, y: -1.23, z: 0.89 }
 ```
 
 ## API
@@ -79,6 +80,7 @@ Calculate e15ver from an already-parsed repository state.
 
 - `parseVersion(str): Version` — Parse "1.2.3" to version components
 - `formatVersion(v): string` — Format version components back to string
+- `formatComplexVersion(result): string` — Format result as complex number: `v(1+0.44i).(2-1.23i).(3+0.89i)`
 - `manifoldPoint(t, fx, fy, fz, commitPhaseShift)` — Calculate position on version manifold
 
 ## How It Works

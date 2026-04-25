@@ -21,6 +21,24 @@ export function formatVersion(v: Version): string {
 }
 
 /**
+ * Format a version with manifold coordinates as a complex number string
+ * Example: "v(1+0.905i).(2-1.234i).(3+0.567i)"
+ */
+export function formatComplexVersion(result: E15verResult): string {
+  const formatComponent = (value: number, coord: number): string => {
+    let sign = '';
+    if (coord > 0) sign = '+';
+    return `${value}${sign}${coord.toFixed(3)}i`;
+  };
+
+  const x = formatComponent(result.version.x, result.manifoldPosition.x);
+  const y = formatComponent(result.version.y, result.manifoldPosition.y);
+  const z = formatComponent(result.version.z, result.manifoldPosition.z);
+
+  return `v(${x}).(${y}).(${z})`;
+}
+
+/**
  * Calculate the manifold position at parameter t
  * This is the parametric curve that branches orbit around
  */
